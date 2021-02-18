@@ -17,6 +17,6 @@ jobs:
         with:
           tf_actions_version: 'latest'
           tg_actions_version: 'latest'
-          tf_actions_subcommand: 'hclfmt'
+          tf_actions_subcommand: 'fmt'
           tf_actions_comment: true
           tf_actions_fmt_write: false
