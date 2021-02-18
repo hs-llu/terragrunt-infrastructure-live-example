@@ -14,4 +14,4 @@ jobs:
         with:
           terragrunt_version: 0.21.13
       - name: Interact with Terragrunt
-        run: tterragrunt hclfmt --terragrunt-check 
+        run: terragrunt hclfmt --terragrunt-check 
