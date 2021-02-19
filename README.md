@@ -1,4 +1,6 @@
+
 (https://img.shields.io/badge/maintained%20by-gruntwork.io-%235849a6.svg)](https://gruntwork.io/?ref=repo_terragrunt-infra-live-example)
+
 
 # Example infrastructure-live for Terragrunt
 

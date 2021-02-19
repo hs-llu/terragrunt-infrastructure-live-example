@@ -1,0 +1,31 @@
+name: 'Terragrunt GitHub Actions'
+on:
+  - pull_request
+
+jobs:
+  example:
+    name: Example Terragrunt interaction
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: install Terragrunt
+        run: wget https://github.com/gruntwork-io/terragrunt/releases/download/v0.28.2/terragrunt_linux_amd64 && 
+             mv terragrunt_linux_amd64 terragrunt &&
+             chmod +x terragrunt &&
+             sudo mv terragrunt /usr/local/bin/terragrunt
+      - name: test
+        run: terragrunt --version
+      - name: Interact with Terragrunt
+        run: terragrunt hclfmt 
+      - name: create dummy file
+        run: echo "test 3" >> test.txt
+      - name: create second dummy file
+        run: echo "new test" >> prod/us-east-1/test.txt
+      - name: add and commit
+        uses: stefanzweifel/git-auto-commit-action@v4 
+        with:
+          file_pattern: "*.txt"
+    
+    
+    
