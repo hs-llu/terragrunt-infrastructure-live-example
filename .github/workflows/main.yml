@@ -12,7 +12,7 @@ jobs:
       - name: install Terragrunt
         run: wget https://github.com/gruntwork-io/terragrunt/releases/download/v0.28.2/terragrunt_linux_amd64 && 
              mv terragrunt_linux_amd64 terragrunt &&
-             chmod +x /usr/local/bin/terragrunt &&
+             chmod +x terragrunt &&
              sudo mv terragrunt /usr/local/bin/terragrunt
       - name: test
         run: terragrunt --version
