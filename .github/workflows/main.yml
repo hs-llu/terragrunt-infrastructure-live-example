@@ -16,4 +16,4 @@ jobs:
       - name: test
         run: terragrunt --version
       - name: Interact with Terragrunt
-        run: terragrunt hclfmt --terragrunt-check 
+        run: terragrunt hclfmt 
