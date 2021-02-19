@@ -18,6 +18,8 @@ jobs:
         run: terragrunt --version
       - name: Interact with Terragrunt
         run: terragrunt hclfmt 
+      - name: create dummy file
+        run: echo "test" >> test.txt
       - name: add and commit
         uses: EndBug/add-and-commit@v7
         with:
