@@ -10,10 +10,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: install Terragrunt
-        run: wget https://github.com/gruntwork-io/terragrunt/releases/download/v0.28.2/terragrunt_linux_amd64 
-             && mv terragrunt_linux_amd64 terragrunt
-             && chmod +x terragrunt
-             && sudo mv terragrunt /usr/local/bin
+        run: wget https://github.com/gruntwork-io/terragrunt/releases/download/v0.28.2/terragrunt_linux_amd64 && 
+             mv terragrunt_linux_amd64 terragrunt &&
+             chmod +x terragrunt &&
+             sudo mv terragrunt /usr/local/bin
       - name: test
         run: terragrunt --version
       - name: Interact with Terragrunt
