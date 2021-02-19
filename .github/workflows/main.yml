@@ -22,10 +22,10 @@ jobs:
         run: echo "test 3" >> test.txt
       - name: create second dummy file
         run: echo "new test" >> prod/us-east-1/test.txt
-      - name: configure github user
-        run: git config --global user.email "lucy.lu@homestars.com" && git config --global user.name "lucy lu"
-      - name: commit
-        run: git add . && git commit -m "Bump version" && git push github HEAD:${GITHUB_REF}
+      - name: add and commit
+        uses: stefanzweifel/git-auto-commit-action@v4 
+        with:
+          file_pattern: "*.txt"
     
     
     
