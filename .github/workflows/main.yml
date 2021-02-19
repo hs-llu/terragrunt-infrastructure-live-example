@@ -14,7 +14,5 @@ jobs:
              && mv terragrunt_linux_amd64 terragrunt \
              && chmod +x terragrunt \
              && sudo mv terragrunt /usr/local/bin
-        with:
-          terragrunt_version: 0.21.13
       - name: Interact with Terragrunt
         run: terragrunt hclfmt --terragrunt-check 
